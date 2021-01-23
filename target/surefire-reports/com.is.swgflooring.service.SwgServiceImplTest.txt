@@ -1,0 +1,26 @@
+-------------------------------------------------------------------------------
+Test set: com.is.swgflooring.service.SwgServiceImplTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 0 sec <<< FAILURE!
+com.is.swgflooring.service.SwgServiceImplTest.testGetallOrders()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at com.is.swgflooring.service.SwgServiceImplTest.testGetallOrders(SwgServiceImplTest.java:73)
+
+com.is.swgflooring.service.SwgServiceImplTest.testValidate()  Time elapsed: 0 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: The test case is a prototype.
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:38)
+	at org.junit.jupiter.api.Assertions.fail(Assertions.java:84)
+	at com.is.swgflooring.service.SwgServiceImplTest.testValidate(SwgServiceImplTest.java:101)
+
+com.is.swgflooring.service.SwgServiceImplTest.testCalculate()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at com.is.swgflooring.service.SwgServiceImplTest.testCalculate(SwgServiceImplTest.java:87)
+
+com.is.swgflooring.service.SwgServiceImplTest.testViewOrder()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at com.is.swgflooring.service.SwgServiceImplTest.testViewOrder(SwgServiceImplTest.java:114)
+
+com.is.swgflooring.service.SwgServiceImplTest.testRemoveOrder()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at com.is.swgflooring.service.SwgServiceImplTest.testRemoveOrder(SwgServiceImplTest.java:129)
+

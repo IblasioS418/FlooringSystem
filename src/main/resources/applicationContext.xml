@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans.xsd
+          http://www.springframework.org/schema/mvc
+          http://www.springframework.org/schema/mvc/spring-mvc.xsd
+          http://www.springframework.org/schema/tx
+          http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+          http://www.springframework.org/schema/context
+          http://www.springframework.org/schema/context/spring-context.xsd
+          http://www.springframework.org/schema/aop  
+          http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+
+    <!-- Bean definitions go here XML is case sensitive! -->
+    <bean id="orderDao" class="com.is.swgflooring.dao.OrderDaoFileImpl">          
+    </bean>
+<!--    <bean id="orderDao" class="com.is.swgflooring.dao.TrainingOrderDaoFileImpl"></bean>
+    <constructor-arg value="TrainingOrders.txt"></constructor-arg>-->
+    <bean id="productDao" class="com.is.swgflooring.dao.ProductDAOFileImpl">   
+        <constructor-arg value="Products.txt" ></constructor-arg>       
+    </bean>
+    <bean id="taxDao" class="com.is.swgflooring.dao.TaxDAOFileImpl">  
+        <constructor-arg value="Taxes.txt" ></constructor-arg>     
+    </bean>
+    
+    <bean id="service" class="com.is.swgflooring.service.SwgServiceImpl">
+        <constructor-arg ref="orderDao" ></constructor-arg>
+        <constructor-arg ref="productDao" ></constructor-arg>
+        <constructor-arg ref="taxDao" ></constructor-arg>
+    </bean>
+    
+    <bean id="io" class="com.is.swgflooring.view.UserIOConsoleImpl">        
+    </bean>
+    
+    <bean id="view" class="com.is.swgflooring.view.SwgView">
+        <constructor-arg ref="io" ></constructor-arg>
+    </bean>
+    
+    <bean id="controller" class="com.is.swgflooring.controller.SwgController">
+        <constructor-arg ref="service" ></constructor-arg>
+        <constructor-arg ref="view" ></constructor-arg>
+    </bean>
+</beans>

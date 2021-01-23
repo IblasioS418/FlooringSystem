@@ -1,0 +1,5 @@
+com\is\swgflooring\service\OrderDaoFileStubImpl.class
+com\is\swgflooring\dao\OrderDaoFileImplTest.class
+com\is\swgflooring\service\SwgServiceImplTest.class
+com\is\swgflooring\service\ProductDaostubImpl.class
+com\is\swgflooring\service\TaxDaostubImpl.class
